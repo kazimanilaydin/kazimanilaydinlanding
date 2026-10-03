@@ -26,7 +26,6 @@ const LINKS = [
   { label: 'GITHUB', sub: '@kazimanilaydin', href: 'https://github.com/kazimanilaydin', icon: 'github' },
   { label: 'LINKEDIN', sub: '/in/kazimanilaydin', href: 'https://www.linkedin.com/in/kazimanilaydin', icon: 'linkedin' },
   { label: 'MEDIUM', sub: '@kazimanilaydin', href: 'https://medium.com/@kazimanilaydin', icon: 'medium' },
-  { label: 'BLOG', sub: 'kazimanilaydin.wordpress.com', href: 'https://kazimanilaydin.wordpress.com', icon: 'wordpress' },
 ];
 
 const svgIcon = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${ICONS[name]}"/></svg>`;

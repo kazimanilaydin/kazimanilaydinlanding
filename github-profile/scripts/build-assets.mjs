@@ -41,7 +41,6 @@ const ABOUT = [
 const LINKS = [
   { file: 'btn-linkedin.svg', label: 'LINKEDIN', sub: '/in/kazimanilaydin', icon: 'in' },
   { file: 'btn-medium.svg', label: 'MEDIUM', sub: '@kazimanilaydin', icon: 'medium' },
-  { file: 'btn-blog.svg', label: 'BLOG', sub: 'wordpress', icon: 'wordpress' },
 ];
 
 const STACK = [

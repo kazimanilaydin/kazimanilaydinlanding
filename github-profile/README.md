@@ -5,7 +5,6 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/kazimanilaydin"><img src="./assets/btn-linkedin.svg" height="52" alt="LinkedIn" /></a>
   <a href="https://medium.com/@kazimanilaydin"><img src="./assets/btn-medium.svg" height="52" alt="Medium" /></a>
-  <a href="https://kazimanilaydin.wordpress.com"><img src="./assets/btn-blog.svg" height="52" alt="Blog" /></a>
 </p>
 
 <p align="center">

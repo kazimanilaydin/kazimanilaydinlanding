@@ -8,7 +8,7 @@ const SLUGS = [
   'nodedotjs', 'express', 'python', 'flask', 'go',
   'mysql', 'postgresql', 'mongodb', 'r', 'jupyter',
   'macos', 'linux', 'git', 'gnubash',
-  'github', 'medium', 'wordpress',
+  'github', 'medium',
 ];
 
 const bySlug = Object.fromEntries(Object.values(icons).filter((i) => i && i.slug).map((i) => [i.slug, i]));

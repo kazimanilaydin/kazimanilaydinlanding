@@ -11,7 +11,7 @@ Statik bir site; derleme adımı gerektirmez. Navy / cyan / altın HUD teması k
 - **Network:** Sürüklenebilir, otomatik dönen 3B WebGL dünya. Gece ışıkları, cyan atmosfer ve
   Türkiye'den dünyaya parlayan yaylar içerir. Etrafında canlı GitHub panelleri bulunur: katkılar,
   seri, aktif günler, diller ve durum.
-- **Links:** GitHub, LinkedIn, Medium, Blog ve 16 dilde "merhaba".
+- **Links:** GitHub, LinkedIn, Medium ve 16 dilde "merhaba".
 
 | Dosya | İçerik |
 | --- | --- |
