@@ -1,6 +1,6 @@
 name: Profile cards
 
-# Rebuilds the live cards (globe dashboard, featured repos, contribution snake)
+# Rebuilds the live cards (globe dashboard, contribution snake)
 # and publishes them to the `output` branch that README.md points at.
 on:
   schedule:
@@ -31,8 +31,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_LOGIN: ${{ github.repository_owner }}
-          # Comma-separated; keep in sync with the repo cards in README.md.
-          FEATURED_REPOS: _cheatsheets_and_notes,ttable.js,python2021course_logparser,basic_twitter_trends_scrape,xOx,mateMatik
+          # Optional: comma-separated repos to render as cards (repo-<name>.svg).
+          # FEATURED_REPOS: repo-one,repo-two
           HIDE_LANGUAGES: Jupyter Notebook
 
       - name: Contribution snake

@@ -180,12 +180,12 @@ export function renderDashboard(profile, stats, { syncedAt = new Date() } = {}) 
   const online = stats.daysSinceActive <= 7 ? ['OPTIMAL', C.ok] : stats.daysSinceActive <= 30 ? ['ONLINE', C.ok] : ['STANDBY', C.gold];
   const R = { x: 740, y: 196, w: 236, h: 182 };
   const rows = [
-    ['Stars earned', profile.stars],
-    ['Commits (1y)', profile.commitsYear],
-    ['Pull requests', profile.pullRequests],
-    ['Issues', profile.issues],
-    ['Public repos', profile.publicRepos],
-    ['Followers', profile.followers],
+    ['Commits (1y)', nf(profile.commitsYear)],
+    ['Pull requests', nf(profile.pullRequests)],
+    ['Issues', nf(profile.issues)],
+    ['Longest streak', `${nf(stats.longestStreak)}d`],
+    ['Followers', nf(profile.followers)],
+    ['On GitHub', `${Math.floor(stats.years)} yrs`],
   ];
   const rightPanel =
     panel(R.x, R.y, R.w, R.h) +
@@ -196,7 +196,7 @@ export function renderDashboard(profile, stats, { syncedAt = new Date() } = {}) 
       const y = R.y + 70 + i * 18.5;
       return `<text class="row" x="${R.x + 14}" y="${y}">${k}</text>` +
         `<path d="M${R.x + 118} ${y - 4}H${R.x + R.w - 64}" stroke="${C.cyan}" stroke-opacity=".25" stroke-dasharray="1 4"/>` +
-        `<text class="rowVal" x="${R.x + R.w - 14}" y="${y}" text-anchor="end">${nf(v)}</text>`;
+        `<text class="rowVal" x="${R.x + R.w - 14}" y="${y}" text-anchor="end">${v}</text>`;
     }).join('');
 
   // ---- bottom widgets -----------------------------------------------------
@@ -299,7 +299,7 @@ export function renderDashboard(profile, stats, { syncedAt = new Date() } = {}) 
     w: W,
     h: H,
     title: `${profile.name} — global connectivity & GitHub metrics`,
-    desc: `${nf(contrib)} contributions in the last year, ${stats.currentStreak}-day streak (longest ${stats.longestStreak}), ${profile.stars} stars, ${profile.followers} followers. A rotating globe with arcs from Türkiye to the world.`,
+    desc: `${nf(contrib)} contributions in the last year, ${stats.currentStreak}-day streak (longest ${stats.longestStreak}), ${profile.followers} followers. A rotating globe with arcs from Türkiye to the world.`,
     defs,
     css,
     body,

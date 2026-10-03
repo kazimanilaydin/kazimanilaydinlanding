@@ -1,4 +1,4 @@
-// Live cards: the globe dashboard and the featured repository cards.
+// Live cards: the globe dashboard (+ optional repository cards).
 // Runs in GitHub Actions (see .github/workflows/profile.yml) with no npm deps.
 //
 //   GITHUB_TOKEN=... node scripts/build-dashboard.mjs [--out dist]
@@ -10,14 +10,6 @@ import { renderDashboard } from './lib/dashboard.mjs';
 import { renderRepoCard } from './lib/repo-card.mjs';
 import { sampleProfile } from './lib/sample-data.mjs';
 
-const DEFAULT_FEATURED = [
-  '_cheatsheets_and_notes',
-  'ttable.js',
-  'python2021course_logparser',
-  'basic_twitter_trends_scrape',
-  'xOx',
-  'mateMatik',
-];
 
 const args = process.argv.slice(2);
 const sample = args.includes('--sample');
@@ -25,7 +17,8 @@ const outDir = args.includes('--out') ? args[args.indexOf('--out') + 1] : 'dist'
 const list = (v) => v.split(',').map((s) => s.trim()).filter(Boolean);
 
 const login = process.env.GH_LOGIN || 'kazimanilaydin';
-const featured = process.env.FEATURED_REPOS ? list(process.env.FEATURED_REPOS) : DEFAULT_FEATURED;
+// Repo cards are opt-in: FEATURED_REPOS=repo-one,repo-two
+const featured = list(process.env.FEATURED_REPOS ?? '');
 const hiddenLanguages = list(process.env.HIDE_LANGUAGES ?? 'Jupyter Notebook');
 const token = process.env.GITHUB_TOKEN;
 

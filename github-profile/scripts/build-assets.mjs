@@ -14,7 +14,7 @@ const out = (name, content) => {
 // ---------------------------------------------------------------------------
 const NAME = 'KΛZIM ΛNIL ΛYDIN';
 const MOTTO = '[ THINK & DO ]';
-const ROLES = 'ENGINEER · DEVELOPER · THINKER · BLOGGER';
+const ROLES = 'ENGINEER · DEVELOPER · THINKER';
 const TYPED = [
   "Hello, World! I'm Kazım Anıl.",
   'Industrial engineer & developer.',
@@ -25,7 +25,7 @@ const RABBIT_LINE = 2;
 
 const ABOUT = [
   ['Name', 'Kazım Anıl Aydın'],
-  ['Roles', 'Engineer · Developer · Thinker · Blogger'],
+  ['Roles', 'Engineer · Developer · Thinker'],
   ['Field', 'Industrial Engineering'],
   ['Edu', 'Ordu Uni. · 19 Mayıs Uni. · Amasya Uni. · Vilnius Uni.'],
   ['Stack', 'Vue · Nuxt · React · Node.js · Python · Go'],
