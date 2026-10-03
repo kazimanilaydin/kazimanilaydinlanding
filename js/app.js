@@ -298,6 +298,7 @@ function bars(el, values) {
 
 function fillStats(p) {
   const s = derive(p);
+  $$('[data-sample-note]').forEach((el) => (el.hidden = !p.sample));
   const values = {
     ...p,
     longestStreak: s.hasCalendar ? `${s.longestStreak}d` : '—',
